@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from .database import engine
 from . import models
+from .config import app_settings
 from fastapi.middleware.cors import CORSMiddleware
 from .routers import courses, users, auth, course_enrollment, lessons, assignments
 

@@ -30,16 +30,16 @@ def get_db():
         db.close()
 
 # Establish a connection to a PostgreSQL database using psycopg2
-while True:
-    try:
-        conn = psycopg2.connect(host=app_settings.DATABASE_HOSTNAME, user=app_settings.DATABASE_USERNAME, password=app_settings.DATABASE_PASSWORD, database=app_settings.DATABASE_NAME, 
-                                cursor_factory=RealDictCursor)
-        cursor = conn.cursor()
-        # Print a success message when the connection is established
-        print("Connecting to online-classroom-api database Successful✅")
-        break
-    except:
-        # If the connection fails, print an error message and retry after a delay
-        print("Connection to online-classroom-api database failed❌")
-        time.sleep(2)
+# while True:
+#     try:
+#         conn = psycopg2.connect(host=app_settings.DATABASE_HOSTNAME, user=app_settings.DATABASE_USERNAME, password=app_settings.DATABASE_PASSWORD, database=app_settings.DATABASE_NAME, 
+#                                 cursor_factory=RealDictCursor)
+#         cursor = conn.cursor()
+#         # Print a success message when the connection is established
+#         print("Connecting to online-classroom-api database Successful✅")
+#         break
+#     except:
+#         # If the connection fails, print an error message and retry after a delay
+#         print("Connection to online-classroom-api database failed❌")
+#         time.sleep(2)
 
